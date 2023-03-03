@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button  onclick="changevalue()">change value</button>
+    <p id="caro"></p>
+</div>
+<script>
+let board= [];
+for( i =0; i < 5 ; i++){
+    board[i]= [0,0,0,0,0]
+ }
+for( i =0; i < 5; i++) {
+    for (j = 0; j < 5; j++) {
+        document.write(board [i][j]  + '&nbsp   ')
+    }document.write('<br>')
+}
+let b =  document.getElementById('caro')
+data += '<button onClick="changevalue()">change value</button>'
+b.innerHTML = data;
+ function changevalue() {
+     let X = prompt('nhap X');
+     let Y = prompt('nhap Y');
+    data = ''
+     board[X][Y]= 'x';
+     for( i =0; i < 5; i++) {
+         data += '<br>'
+         for (j = 0; j < 5; j++) {
+             data += board [i][j]  + '&nbsp'
+         }
+     }
+ }
+
+
+
+</script>
+
+
+</body>
+</html>
